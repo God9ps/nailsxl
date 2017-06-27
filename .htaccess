@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^pagina-inicial$ index.php [QSA,L,NC]
+    RewriteRule ^carrinho$ index.php?pagina=carrinho [QSA,L,NC]
+
+</IfModule>
